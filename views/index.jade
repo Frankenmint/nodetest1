@@ -1,0 +1,51 @@
+extends layout
+
+block content
+	h1= title
+	p
+		| Welcome to our test.
+
+	#wrapper
+		#userInfo
+			h2 User Info
+			p
+				strong Name:
+				|		<span id='userInfoName'></span>
+				br
+				strong Age:
+				|		<span id='userInfoAge'></span>
+				br
+				strong Gender:
+				|		<span id='userInfoGender'></span>
+				br
+				strong Location:
+				|		<span id='userInfoLocation'></span>
+
+		h2 User List
+		#userList
+			table
+				thead
+					th Username
+					th Email
+					th Delete?
+				tbody
+
+		h2 Add User
+		#addUser
+			fieldset
+				label(for='inputUserName') Username:
+				input#inputUserName(type='text', placeholder='Username')
+				label(for='inputUserEmail') Email:
+				input#inputUserEmail(type='text', placeholder='Email')
+				br
+				label(for='inputUserFullname') Full Name:
+				input#inputUserFullname(type='text', placeholder='Full Name')
+				label(for='inputUserAge' class='age') Age:
+				input#inputUserAge(type='text', placeholder='Age')
+				br
+				label(for='inputUserLocation' class='loc') Location:
+				input#inputUserLocation(type='text', placeholder='Location')
+				label(for='inputUserGender' class='gender') Gender:
+				input#inputUserGender(type='text', placeholder='Gender')
+				br
+				button#btnAddUser Add User
